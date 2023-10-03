@@ -29,13 +29,23 @@ class API_Endpoints_People extends API {
 
 		register_rest_route(
 			'directory/api/v1',
+			'/people',
+			array(
+				'methods' => \WP_REST_Server::READABLE,
+				'callback' => array( __CLASS__, 'get_directory_people' ),
+				//'permission_callback' => function () { var_dump( is_user_logged_in() ); return current_user_can( 'edit_posts' ); }
+			)
+		);
+
+		/*register_rest_route(
+			'directory/api/v1',
 			'/people/get',
 			array(
 				'methods' => \WP_REST_Server::READABLE,
 				'callback' => array( __CLASS__, 'get_people' ),
 				//'permission_callback' => function () { var_dump( is_user_logged_in() ); return current_user_can( 'edit_posts' ); }
 			)
-		);
+		);*/
 
 		register_rest_route(
 			'directory/api/v1',
@@ -49,10 +59,10 @@ class API_Endpoints_People extends API {
 
 		register_rest_route(
 			'directory/api/v1',
-			'/editor/people_ids/taxonomy/get',
+			'/people/tax-query',
 			array(
 				'methods' => \WP_REST_Server::READABLE,
-				'callback' => array( __CLASS__, 'editor_get_people_ids_by_taxonomy' ),
+				'callback' => array( __CLASS__, 'get_people_by_taxonomy' ),
 				//'permission_callback' => function () { var_dump( is_user_logged_in() ); return current_user_can( 'edit_posts' ); }
 			)
 		);
@@ -71,10 +81,11 @@ class API_Endpoints_People extends API {
 	}
 
 
-	public static function editor_get_people_ids_by_taxonomy() {
+	public static function get_people_by_taxonomy() {
 
 		$taxonomy = ( isset( $_REQUEST['taxonomy'] ) ) ? sanitize_text_field( $_REQUEST['taxonomy'] ) : '';
 		$term     = ( isset( $_REQUEST['term'] ) ) ? sanitize_text_field( $_REQUEST['term'] ) : '';
+		$format   = ( isset( $_REQUEST['format'] ) && ! empty( $_REQUEST['format'] ) ) ? sanitize_text_field( $_REQUEST['format'] ) : 'array';
 
 		if ( empty( $taxonomy ) || empty( $term ) ) {
 
@@ -85,7 +96,9 @@ class API_Endpoints_People extends API {
 
 		$tax_array[ $taxonomy ] = $term;
 		
-		$people = People::get_people_by_taxonomy( array( 'taxonomies' => $tax_array ), 'ids' );
+		$people = People::get_people_by_taxonomy( $tax_array );
+
+		$people = People::get_format( $people, $format );
 
 		return self::respond( $people );
 
@@ -94,9 +107,39 @@ class API_Endpoints_People extends API {
 
 	public static function search_people() {
 
-		$term = ( isset( $_REQUEST['term'] ) ) ? sanitize_text_field( $_REQUEST['term'] ) : '';
+		$term   = ( isset( $_REQUEST['term'] ) ) ? sanitize_text_field( $_REQUEST['term'] ) : '';
+		$format = ( isset( $_REQUEST['format'] ) && ! empty( $_REQUEST['format'] ) ) ? sanitize_text_field( $_REQUEST['format'] ) : 'array';
 
-		$people = People::search_people( $term, array( 'is_api' => true ) );
+		$people = People::search_people( $term );
+
+		$people = People::get_format( $people, $format );
+
+		return self::respond( $people );
+
+	}
+
+
+	public static function get_directory_people() {
+
+		$directory_id     = ( isset( $_REQUEST['directory'] ) && ! empty( $_REQUEST['directory'] ) ) ? sanitize_text_field( $_REQUEST['directory'] ) : false;
+		$format           = ( isset( $_REQUEST['format'] ) && ! empty( $_REQUEST['format'] ) ) ? sanitize_text_field( $_REQUEST['format'] ) : 'array';
+		$include_children = ( isset( $_REQUEST['include_children'] ) ) ? sanitize_text_field( $_REQUEST['include_children'] ) : 1;
+		$people_ids       = ( isset( $_REQUEST['people_ids'] ) && ! empty( $_REQUEST['people_ids'] ) ) ? sanitize_text_field( $_REQUEST['people_ids'] ) : '';
+
+
+		if (  ! empty( $people_ids  ) ) {
+
+			$people_ids = explode( ',', $people_ids );
+			$people     = People::get_people_by_ids( $people_ids, $directory_id );
+			
+
+		} else {
+
+			$people = People::get_directory_people( $directory_id, $include_children );
+
+		}
+
+		$people = People::get_format( $people, $format );
 
 		return self::respond( $people );
 

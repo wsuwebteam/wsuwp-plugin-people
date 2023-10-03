@@ -14,6 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/utilities */ "./assets/src/utilities/utilities.js");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_style.scss */ "./assets/src/components/child-directory-add-editor/_style.scss");
+
 
 
 
@@ -28,7 +30,9 @@ const ChildDirectoryAddEditor = props => {
   const insertDirectory = () => {
     (0,_utilities_utilities__WEBPACK_IMPORTED_MODULE_1__.addDirectory)(directory.id, directoryName, onAdd);
   };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "wsu-cmp-child-directory-add-editor"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     placeholder: "Directory Name",
     value: directoryName,
     onChange: value => {
@@ -55,6 +59,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_style.scss */ "./assets/src/components/child-directory-card/_style.scss");
+
 
 
 const ChildDirectoryCard = props => {
@@ -63,7 +69,9 @@ const ChildDirectoryCard = props => {
     id = false,
     peopleIDs = []
   } = props;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, title);
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    className: "wsu-cpm-child-directory-card"
+  }, title);
 };
 /* harmony default export */ __webpack_exports__["default"] = (ChildDirectoryCard);
 
@@ -80,6 +88,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utilities_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/utilities */ "./assets/src/utilities/utilities.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components */ "./assets/src/components/components.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_style.scss */ "./assets/src/components/child-directory-editor/_style.scss");
+
 
 
 
@@ -122,6 +132,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./assets/src/components/components.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_style.scss */ "./assets/src/components/child-directory-list/_style.scss");
+
 
 
 const ChildDirectoryList = props => {
@@ -195,6 +207,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _utilities_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/utilities */ "./assets/src/utilities/utilities.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_style.scss */ "./assets/src/components/people-add-editor-advanced/_style.scss");
+
 
 
 
@@ -205,8 +219,8 @@ const PeopleAddEditorAdvanced = props => {
   const [termList, setTermList] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   const [term, setTerm] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)('');
   let {
-    directory,
-    peopleIDs,
+    isActive,
+    setInactive,
     addPeopleIDs
   } = props;
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
@@ -221,7 +235,13 @@ const PeopleAddEditorAdvanced = props => {
   }];
   let taxonomyOptions = defaultSelect.concat(taxonomyList);
   let termOptions = defaultSelect.concat(termList);
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+  let expanded = isActive ? 'true' : 'false';
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "wsu-cpm-people-add-editor-advanced",
+    "aria-expanded": expanded
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "wsu-cpm-people-add-editor-advanced__inner"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
     label: "Taxonomy",
     value: taxonomy,
     options: taxonomyOptions,
@@ -236,6 +256,7 @@ const PeopleAddEditorAdvanced = props => {
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
     onClick: () => {
       (0,_utilities_utilities__WEBPACK_IMPORTED_MODULE_2__.getPeopleIDsFromTaxonomy)(taxonomy, term, addPeopleIDs);
+      setInactive(false);
     }
   }, "Import People")));
 };
@@ -265,6 +286,7 @@ __webpack_require__.r(__webpack_exports__);
 const PeopleAddEditor = props => {
   const [personName, setPersonName] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)('');
   const [searchResults, setSearchResults] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  const [useAdvanced, setUseAdvanced] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const clearResults = () => {
     setSearchResults([]);
     setPersonName('');
@@ -295,8 +317,16 @@ const PeopleAddEditor = props => {
         clearResults();
       }
     });
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components__WEBPACK_IMPORTED_MODULE_1__.PeopleAddEditorAdvanced, {
-    ...props
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    onClick: () => {
+      setUseAdvanced(true);
+    }
+  }, "Advanced Import"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components__WEBPACK_IMPORTED_MODULE_1__.PeopleAddEditorAdvanced, {
+    ...props,
+    isActive: useAdvanced,
+    setInactive: () => {
+      setUseAdvanced(false);
+    }
   })));
 };
 /* harmony default export */ __webpack_exports__["default"] = (PeopleAddEditor);
@@ -315,6 +345,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./assets/src/components/components.js");
 /* harmony import */ var _utilities_people__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/people */ "./assets/src/utilities/people.js");
 /* harmony import */ var _utilities_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/utilities */ "./assets/src/utilities/utilities.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_style.scss */ "./assets/src/components/people-directory-editor/_style.scss");
+
 
 
 
@@ -347,7 +379,7 @@ const PeopleDirectoryEditor = props => {
     class: "wsu-cmp-people-directory-editor"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components__WEBPACK_IMPORTED_MODULE_1__.PeopleAddEditor, {
     addPeopleIDs: addPeopleIDs
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, "Hello World"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components__WEBPACK_IMPORTED_MODULE_1__.PeopleList, {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components__WEBPACK_IMPORTED_MODULE_1__.PeopleList, {
     people: people,
     removePeopleIDs: removePeopleIDs
   }));
@@ -366,6 +398,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components */ "./assets/src/components/components.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_style.scss */ "./assets/src/components/people-list/_style.scss");
+
 
 
 const PeopleList = props => {
@@ -400,6 +434,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_style.scss */ "./assets/src/components/person-card/_style.scss");
+
 
 
 const PersonCard = props => {
@@ -409,7 +445,9 @@ const PersonCard = props => {
     directoryID = false,
     removePerson
   } = props;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, displayName, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    className: "wsu-cpm-person-card"
+  }, displayName, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
     onClick: () => {
       removePerson(id);
     }
@@ -578,7 +616,7 @@ const getChildDirectories = (directoryID, callback) => {
     directory_id: directoryID
   };
   _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
-    path: (0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)('/directory/api/v1/children/get', data)
+    path: (0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)('/directory/api/v1/children', data)
   }).then(response => {
     callback(response.response);
   });
@@ -604,10 +642,11 @@ __webpack_require__.r(__webpack_exports__);
 const getPeopleIDsFromTaxonomy = (taxonomy, term, callback) => {
   let data = {
     taxonomy,
-    term
+    term,
+    format: 'id'
   };
   _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
-    path: (0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)('/directory/api/v1/editor/people_ids/taxonomy/get', data)
+    path: (0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)('/directory/api/v1/people/tax-query', data)
   }).then(response => {
     callback(response.response);
   });
@@ -690,17 +729,20 @@ __webpack_require__.r(__webpack_exports__);
 
 const getPeople = (directoryID, peopleIDs, callback, fields = ['name']) => {
   peopleIDs = Array.isArray(peopleIDs) ? peopleIDs.join(',') : '';
-  let data = {
-    people_ids: peopleIDs,
-    directory: directoryID,
-    fields: fields.join(',')
-  };
-  _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
-    path: (0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)('/directory/api/v1/people/get', data)
-  }).then(response => {
-    callback(response.response);
-  });
-  return [];
+  if (peopleIDs) {
+    let data = {
+      people_ids: peopleIDs,
+      directory: directoryID,
+      fields: fields.join(',')
+    };
+    _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+      path: (0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)('/directory/api/v1/people', data)
+    }).then(response => {
+      callback(response.response);
+    });
+  } else {
+    callback([]);
+  }
 };
 const searchPeople = (term, callback) => {
   let data = {
@@ -965,6 +1007,102 @@ const edit = (props) => {
 };
 
 export default edit;*/
+
+/***/ }),
+
+/***/ "./assets/src/components/child-directory-add-editor/_style.scss":
+/*!**********************************************************************!*\
+  !*** ./assets/src/components/child-directory-add-editor/_style.scss ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./assets/src/components/child-directory-card/_style.scss":
+/*!****************************************************************!*\
+  !*** ./assets/src/components/child-directory-card/_style.scss ***!
+  \****************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./assets/src/components/child-directory-editor/_style.scss":
+/*!******************************************************************!*\
+  !*** ./assets/src/components/child-directory-editor/_style.scss ***!
+  \******************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./assets/src/components/child-directory-list/_style.scss":
+/*!****************************************************************!*\
+  !*** ./assets/src/components/child-directory-list/_style.scss ***!
+  \****************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./assets/src/components/people-add-editor-advanced/_style.scss":
+/*!**********************************************************************!*\
+  !*** ./assets/src/components/people-add-editor-advanced/_style.scss ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./assets/src/components/people-directory-editor/_style.scss":
+/*!*******************************************************************!*\
+  !*** ./assets/src/components/people-directory-editor/_style.scss ***!
+  \*******************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./assets/src/components/people-list/_style.scss":
+/*!*******************************************************!*\
+  !*** ./assets/src/components/people-list/_style.scss ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./assets/src/components/person-card/_style.scss":
+/*!*******************************************************!*\
+  !*** ./assets/src/components/person-card/_style.scss ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 

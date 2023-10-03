@@ -30,7 +30,7 @@ class API_Endpoints_Directory extends API {
 
 		register_rest_route(
 			'directory/api/v1',
-			'/children/get',
+			'/children',
 			array(
 				'methods' => \WP_REST_Server::READABLE,
 				'callback' => array( __CLASS__, 'get_directory_children' ),
@@ -97,10 +97,13 @@ class API_Endpoints_Directory extends API {
 	public static function get_directory_children() {
 
 		$directory_id = ( isset( $_REQUEST['directory_id'] ) ) ? (int) sanitize_text_field( $_REQUEST['directory_id'] ) : false;
+		$format           = ( isset( $_REQUEST['format'] ) && ! empty( $_REQUEST['format'] ) ) ? sanitize_text_field( $_REQUEST['format'] ) : 'array';
 
 		if ( $directory_id ) {
 
 			$directories = Directories::get_child_directories( $directory_id, true );
+
+			$directories = Directories::get_format( $directories, $format );
 
 			return self::respond( $directories, true, 'Directories Found' );
 

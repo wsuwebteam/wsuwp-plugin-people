@@ -6,6 +6,7 @@ class Person {
 	protected $post_id      = false;
 	protected $directory_id = false;
 	protected $display_name = '';
+	protected $slug         = '';
 
 
 	public function get( $property, $default = '' ) {
@@ -38,6 +39,7 @@ class Person {
 
 		$this->post_id  = $post_el->ID;
 		$this->post_obj = $post_el;
+		$this->slug     = $post_el->post_name;
 
 		if ( $in_loop ) {
 
@@ -48,25 +50,32 @@ class Person {
 	}
 
 
-	public function get_person_array( $fields = array() ) {
+
+
+
+	public function get_format( $format ) {
+
+		switch ( $format ) {
+
+			case 'id':
+				return $this->post_id;
+			case 'array':
+				return $this->get_array_format();
+			case 'slug':
+				return $this->slug;
+			default:
+				return $this;
+		}
+
+	}
+
+	public function get_array_format() {
 
 		$person = array(
 			'displayName' => $this->display_name,
 			'id'           => $this->post_id,
 			'directoryID'  => $this->directory_id,
 		);
-
-		if ( ! empty( $fields ) ) {
-
-			foreach ( $person as $key => $value ) {
-
-				if ( ! in_array( $key, $fields, true ) ) {
-
-					unset( $person[ $key ] );
-
-				}
-			}
-		}
 
 		return $person;
 

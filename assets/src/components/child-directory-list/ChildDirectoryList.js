@@ -2,6 +2,8 @@ import {
     ChildDirectoryCard
 } from "../components";
 
+import './_style.scss';
+
 
 const ChildDirectoryList = ( props ) => {
 

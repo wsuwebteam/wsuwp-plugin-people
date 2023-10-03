@@ -1,5 +1,7 @@
 import { TextControl, Button } from '@wordpress/components';
 
+import './_style.scss';
+
 const PersonCard = ( props ) => {
 
     let {
@@ -10,9 +12,9 @@ const PersonCard = ( props ) => {
     } = props;
 
     return (
-        <div>{ displayName }
+        <li className="wsu-cpm-person-card">{ displayName }
             <Button onClick={ () => { removePerson( id ) } } >Remove</Button>
-        </div>
+        </li>
     );
 
 }

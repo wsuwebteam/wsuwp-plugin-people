@@ -6,6 +6,8 @@ import {
     ChildDirectoryAddEditor 
 } from "../components";
 
+import './_style.scss';
+
 const ChildDirectoryEditor = ( props ) => {
 
     let {

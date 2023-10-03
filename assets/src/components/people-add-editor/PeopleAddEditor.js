@@ -10,6 +10,7 @@ const PeopleAddEditor = ( props ) => {
 
     const [personName, setPersonName]       = useState('');
     const [searchResults, setSearchResults] = useState([]);
+    const [useAdvanced, setUseAdvanced] = useState(false);
 
     const clearResults = () => {
         setSearchResults([]);
@@ -49,7 +50,10 @@ const PeopleAddEditor = ( props ) => {
                 </ul> }
             </div>
             <div>
-                <PeopleAddEditorAdvanced { ...props } />
+                <Button
+                    onClick={ () => { setUseAdvanced( true) } }
+                    >Advanced Import</Button>
+                <PeopleAddEditorAdvanced { ...props } isActive={ useAdvanced } setInactive={() => {setUseAdvanced(false) } } />
             </div>
         </div>
     );

@@ -9,7 +9,7 @@ const getChildDirectories = ( directoryID, callback ) => {
     }
 
     apiFetch( { 
-        path: addQueryArgs( '/directory/api/v1/children/get', data ) ,
+        path: addQueryArgs( '/directory/api/v1/children', data ) ,
     }).then( ( response ) => {
 
         callback( response.response );

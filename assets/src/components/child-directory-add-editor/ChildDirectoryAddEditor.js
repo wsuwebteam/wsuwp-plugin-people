@@ -2,6 +2,8 @@ import { useState } from '@wordpress/element';
 import { addDirectory } from '../../utilities/utilities';
 import { TextControl, Button } from '@wordpress/components';
 
+import './_style.scss';
+
 
 const ChildDirectoryAddEditor = ( props ) => {
 
@@ -21,7 +23,7 @@ const ChildDirectoryAddEditor = ( props ) => {
     }
 
     return (
-        <div>
+        <div className="wsu-cmp-child-directory-add-editor">
             <div>
                 <TextControl
                     placeholder="Directory Name"

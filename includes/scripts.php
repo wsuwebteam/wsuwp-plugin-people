@@ -37,7 +37,7 @@ class Scripts {
 
 	public static function localize_editor_data() {
 
-		wp_register_script( 'wsuwp-plugin-people-editor-data', Plugin::get( 'url' ), array(), $editor_asset['version'], true );
+		wp_register_script( 'wsuwp-plugin-people-editor-data', '', array(), $editor_asset['version'], true );
 
 		wp_localize_script(
 			'wsuwp-plugin-people-editor-data',

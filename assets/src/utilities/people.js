@@ -2,25 +2,31 @@ import apiFetch from "@wordpress/api-fetch";
 import { addQueryArgs } from '@wordpress/url';
 
 
-const getPeople = ( directoryID, peopleIDs, callback, fields = ['name'] ) => {
+const getPeople = ( directoryID, peopleIDs, callback, fields = ['name'], ) => {
 
     peopleIDs = Array.isArray( peopleIDs ) ? peopleIDs.join(',') : '';
 
-    let data = { 
-        people_ids:peopleIDs, 
-        directory:directoryID, 
-        fields:fields.join(',') 
+    if ( peopleIDs ) {
+
+        let data = { 
+            people_ids:peopleIDs, 
+            directory:directoryID, 
+            fields:fields.join(',') 
+        }
+    
+        apiFetch( { 
+            path: addQueryArgs( '/directory/api/v1/people', data ) ,
+        }).then( ( response ) => {
+    
+            callback( response.response );
+    
+        });
+
+    } else {
+
+        callback( [] );
+
     }
-
-    apiFetch( { 
-        path: addQueryArgs( '/directory/api/v1/people/get', data ) ,
-    }).then( ( response ) => {
-
-        callback( response.response );
-
-    });
-
-    return [];
 
 }
 

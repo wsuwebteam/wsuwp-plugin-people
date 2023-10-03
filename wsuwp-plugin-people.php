@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WSUWP People
+ * Plugin Name: (Beta) WSUWP People
  * Description: A WordPress plugin to index and display people.
  * Version: 0.0.1
  * Requires PHP: 7.0

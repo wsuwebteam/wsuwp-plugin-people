@@ -7,7 +7,7 @@ import {
 } from '../../utilities/utilities';
 
 
-
+import './_style.scss';
 
 
 
@@ -19,8 +19,8 @@ const PeopleAddEditorAdvanced = ( props ) => {
     const [term, setTerm]                 = useState('');
 
     let {
-        directory,
-        peopleIDs,
+        isActive,
+        setInactive,
         addPeopleIDs
     } = props;
 
@@ -40,10 +40,11 @@ const PeopleAddEditorAdvanced = ( props ) => {
 
     let taxonomyOptions = defaultSelect.concat( taxonomyList );
     let termOptions = defaultSelect.concat( termList );
+    let expanded = ( isActive ) ? 'true':'false';
 
     return (
-        <div>
-            <div>
+        <div className="wsu-cpm-people-add-editor-advanced" aria-expanded={ expanded } >
+            <div className="wsu-cpm-people-add-editor-advanced__inner">
             <SelectControl
                 label='Taxonomy'
                 value={ taxonomy }
@@ -57,7 +58,7 @@ const PeopleAddEditorAdvanced = ( props ) => {
                 onChange={ ( value ) => { setTerm( value )} }
             />
                 <Button
-                    onClick={ () => { getPeopleIDsFromTaxonomy( taxonomy, term, addPeopleIDs ) } }
+                    onClick={ () => { getPeopleIDsFromTaxonomy( taxonomy, term, addPeopleIDs ); setInactive( false ) } }
                     >Import People</Button>
             </div>
         </div>

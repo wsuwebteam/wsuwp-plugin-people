@@ -1,5 +1,7 @@
 import { TextControl, Button } from '@wordpress/components';
 
+import './_style.scss';
+
 const ChildDirectoryCard = ( props ) => {
 
     let {
@@ -9,8 +11,8 @@ const ChildDirectoryCard = ( props ) => {
     } = props;
 
     return (
-        <div>{ title }
-        </div>
+        <li className="wsu-cpm-child-directory-card">{ title }
+        </li>
     );
 
 }

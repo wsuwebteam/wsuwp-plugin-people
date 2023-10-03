@@ -1,0 +1,83 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/people-directory-editor/_style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+.wsu-cmp-people-directory-editor {
+  padding: 3rem 0;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/people-add-editor-advanced/_style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.wsu-cpm-people-add-editor-advanced[aria-expanded=false] .wsu-cpm-people-add-editor-advanced__inner {
+  display: none;
+}
+
+.wsu-cpm-people-add-editor-advanced__inner {
+  padding: 2rem 0;
+}
+.wsu-cpm-people-add-editor-advanced__inner button {
+  background-color: var(--wp-admin-theme-color);
+  color: #fff;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/person-card/_style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+.wsu-cpm-person-card {
+  border: 1px solid var(--wp-admin-theme-color);
+  padding: 1.5rem !important;
+  max-width: 200px;
+  border-radius: 6px;
+  list-style-type: none;
+  margin: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.wsu-cpm-person-card button {
+  background-color: var(--wp-admin-theme-color);
+  color: #fff;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/people-list/_style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+.wsu-cmp-people-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 !important;
+  padding: 2rem 0 1rem !important;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/child-directory-editor/_style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.wsu-cmp-child-directory-editor {
+  border-bottom: 4px dashed #ccc;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/child-directory-list/_style.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.wsu-cmp-child-directory-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 !important;
+  padding: 2rem 0 1rem !important;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/child-directory-card/_style.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.wsu-cpm-child-directory-card {
+  border: 1px solid var(--wp-admin-theme-color);
+  padding: 1.5rem !important;
+  max-width: 200px;
+  border-radius: 6px;
+  list-style-type: none;
+  margin: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/child-directory-add-editor/_style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.wsu-cmp-child-directory-add-editor button {
+  background-color: var(--wp-admin-theme-color);
+  color: #fff;
+}
+
+/*# sourceMappingURL=editor.css.map*/

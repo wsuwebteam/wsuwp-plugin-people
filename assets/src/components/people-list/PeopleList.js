@@ -2,6 +2,8 @@ import {
     PersonCard
 } from "../components";
 
+import './_style.scss';
+
 
 const PeopleList = ( props ) => {
 

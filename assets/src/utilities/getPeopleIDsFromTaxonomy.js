@@ -7,10 +7,11 @@ const getPeopleIDsFromTaxonomy = ( taxonomy, term, callback ) => {
     let data = { 
         taxonomy,
         term,
+        format:'id',
     }
 
     apiFetch( { 
-        path: addQueryArgs( '/directory/api/v1/editor/people_ids/taxonomy/get', data ) ,
+        path: addQueryArgs( '/directory/api/v1/people/tax-query', data ) ,
     }).then( ( response ) => {
 
         callback( response.response );

@@ -10,6 +10,7 @@ import { getPeople } from "../../utilities/people";
 
 import { addIDs, removeIDs } from '../../utilities/utilities';
 
+import './_style.scss';
 
 
 const PeopleDirectoryEditor = ( props ) => {
@@ -49,7 +50,6 @@ const PeopleDirectoryEditor = ( props ) => {
             <PeopleAddEditor
                 addPeopleIDs={ addPeopleIDs }
                 />
-            <div>Hello World</div>
             <PeopleList 
                 people={ people }
                 removePeopleIDs={ removePeopleIDs }
