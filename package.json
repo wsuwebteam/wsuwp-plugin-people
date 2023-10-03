@@ -1,0 +1,17 @@
+{
+    "name": "wsuwp-plugin-people",
+    "version": "0.0.1",
+    "description": "A WordPress plugin to index and display people.",
+    "directories": {
+      "test": "tests"
+    },
+    "scripts": {
+      "start": "wp-scripts start assets/src/editor.js --output-path=assets/dist/",
+      "build": "wp-scripts build assets/src/editor.js --output-path=assets/dist/"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@wordpress/scripts": "^26.2.0"
+    }
+  }

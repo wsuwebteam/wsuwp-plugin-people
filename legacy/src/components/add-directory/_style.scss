@@ -1,0 +1,38 @@
+.wsu-gb-people-add-directory {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height ease-in-out 500ms;
+
+    &__inner-wrapper {
+        padding: 1.5rem;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+
+        & > div:first-child {
+            flex-grow: 1;
+            max-width: 500px;
+        }
+    }
+    
+
+    &.is-active {
+        max-height: 300px;
+    }
+
+
+    input,
+    button {
+        min-height: 60px;
+        padding: 0 1rem !important;
+        display: block;
+    }
+
+    button {
+        background-color: #CA1237;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px !important;
+        border-radius: 6px;
+    }
+
+}

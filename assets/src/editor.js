@@ -1,0 +1,1 @@
+import '../../blocks/wsu-directory/editor/block';

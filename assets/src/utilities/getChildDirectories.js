@@ -1,0 +1,23 @@
+import apiFetch from "@wordpress/api-fetch";
+import { addQueryArgs } from '@wordpress/url';
+
+
+const getChildDirectories = ( directoryID, callback ) => {
+
+    let data = { 
+        directory_id:directoryID, 
+    }
+
+    apiFetch( { 
+        path: addQueryArgs( '/directory/api/v1/children/get', data ) ,
+    }).then( ( response ) => {
+
+        callback( response.response );
+
+    });
+
+    return [];
+
+}
+
+export default getChildDirectories;

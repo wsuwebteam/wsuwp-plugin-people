@@ -1,0 +1,49 @@
+.wsu-gb-people-directory {
+    width: 200px;
+    min-height: 100px;
+    margin: 0.5rem;
+    box-sizing: border-box;
+    padding: 0.75rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+
+    &:not(button) {
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+        
+        border: 1px solid #CA1237;
+    }
+
+    &__add {
+        border: 3px dashed #CA1237;
+        color: #CA1237;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 16px !important;
+
+        &::after {
+            content:"+";
+            display: block;
+            font-size: 22px !important;
+        }
+    }
+
+
+
+    h3 {
+        font-size: 16px !important;
+        font-weight: 600;
+    }
+    
+
+    a {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
