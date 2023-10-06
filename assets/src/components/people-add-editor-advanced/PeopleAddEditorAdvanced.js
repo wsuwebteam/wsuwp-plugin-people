@@ -15,7 +15,7 @@ const PeopleAddEditorAdvanced = ( props ) => {
 
     const [taxonomy, setTaxonomy]         = useState('');
     const [taxonomyList, setTaxonomyList] = useState([]);
-    const [termList, setTermList]          = useState([]);
+    const [termList, setTermList]         = useState([]);
     const [term, setTerm]                 = useState('');
 
     let {
@@ -42,6 +42,9 @@ const PeopleAddEditorAdvanced = ( props ) => {
     let termOptions = defaultSelect.concat( termList );
     let expanded = ( isActive ) ? 'true':'false';
 
+    console.log( taxonomy );
+    console.log( taxonomyOptions );
+
     return (
         <div className="wsu-cpm-people-add-editor-advanced" aria-expanded={ expanded } >
             <div className="wsu-cpm-people-add-editor-advanced__inner">
@@ -58,6 +61,7 @@ const PeopleAddEditorAdvanced = ( props ) => {
                 onChange={ ( value ) => { setTerm( value )} }
             />
                 <Button
+                    className='wsu-gbe-people-button wsu-gbe-people-button--inline'
                     onClick={ () => { getPeopleIDsFromTaxonomy( taxonomy, term, addPeopleIDs ); setInactive( false ) } }
                     >Import People</Button>
             </div>

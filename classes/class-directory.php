@@ -42,6 +42,8 @@ class Directory {
 
 		$people_array = explode( ',', $people );
 
+		$people_array = array_filter( $people_array );
+
 		$this->people_ids = array_map( 'intval', $people_array );
 
 	}

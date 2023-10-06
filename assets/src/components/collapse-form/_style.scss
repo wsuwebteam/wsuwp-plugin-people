@@ -1,0 +1,18 @@
+@import '../../scss/variables.scss';
+
+.wsu-gbe-people__collapse-form {
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height ease-in-out 500ms;
+
+    &[aria-expanded="true"] {
+        max-height: 500px;
+    }
+
+    &__inner-wrapper {
+        background-color: $wsu-color-gray-light;
+        padding: 1.5rem;
+    }
+
+}

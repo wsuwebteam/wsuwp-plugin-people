@@ -1,0 +1,27 @@
+@import '../../scss/variables.scss';
+
+.wsu-gbe-people-editor__person-search-card {
+    border: 1px solid $wsu-color-crimson;
+    background-color: #fff;
+    padding: 0 0 1rem !important;
+    border-radius: 6px;
+    list-style-type: none;
+    margin: 0 1rem 1rem 0 !important;
+    flex: 0 0 225px;
+
+    button {
+        height: auto !important;
+        text-align: left;
+        font-weight: 600;
+        color: $wsu-color-crimson;
+        display: block !important;
+    }
+
+    &__title {
+        font-size: 0.8rem;
+        display: block;
+        color: #555;
+        font-weight: 400;
+    }
+
+}

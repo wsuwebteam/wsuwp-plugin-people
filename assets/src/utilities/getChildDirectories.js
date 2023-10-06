@@ -12,6 +12,8 @@ const getChildDirectories = ( directoryID, callback ) => {
         path: addQueryArgs( '/directory/api/v1/children', data ) ,
     }).then( ( response ) => {
 
+        console.log( response.response );
+
         callback( response.response );
 
     });

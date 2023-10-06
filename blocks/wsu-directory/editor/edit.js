@@ -66,18 +66,18 @@ const edit = (props) => {
   }
 
   return (
-    <>
-    <ChildDirectoryEditor
-      directory={ directory }
-      childDirectories={ childDirectories }
-      setChildDirectories={setChildDirectories}
-      />
-    <PeopleDirectoryEditor
-      directory={ directory }
-      peopleIDs={ attributes.peopleIDs }
-      setPeopleIDs={ setPeopleIDs }
-      />
-    </>
+    <div className="wsu-gbe-people-editor">
+      <ChildDirectoryEditor
+        directory={ directory }
+        childDirectories={ childDirectories }
+        setChildDirectories={setChildDirectories}
+        />
+      <PeopleDirectoryEditor
+        directory={ directory }
+        peopleIDs={ attributes.peopleIDs }
+        setPeopleIDs={ setPeopleIDs }
+        />
+    </div>
   )
 }
 

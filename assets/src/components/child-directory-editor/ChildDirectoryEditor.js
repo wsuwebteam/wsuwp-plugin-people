@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "@wordpress/element";
 import { getChildDirectories } from '../../utilities/utilities';
 import {
     ChildDirectoryList, 
-    ChildDirectoryAddEditor 
+    ChildDirectoryAddEditor,
+    HelperText
 } from "../components";
 
 import './_style.scss';
@@ -14,8 +15,7 @@ const ChildDirectoryEditor = ( props ) => {
         directory,
         childDirectories,
         setChildDirectories
-    } = props
-
+    } = props;
 
 
     const updateChildDirectories = () => {
@@ -30,12 +30,11 @@ const ChildDirectoryEditor = ( props ) => {
         
     }, [] );
 
-    console.log( childDirectories );
-
     return (
         <div className="wsu-cmp-child-directory-editor">
             <ChildDirectoryAddEditor  directory={directory} onAdd={ () => { updateChildDirectories() } } />
             <ChildDirectoryList childDirectories={childDirectories} />
+            <HelperText>*People total does not included inhereted directories</HelperText>
         </div>
     )
 

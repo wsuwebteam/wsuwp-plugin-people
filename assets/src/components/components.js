@@ -8,3 +8,6 @@ export { default as ChildDirectoryEditor } from './child-directory-editor/ChildD
 export { default as ChildDirectoryList } from './child-directory-list/ChildDirectoryList';
 export { default as ChildDirectoryCard } from './child-directory-card/ChildDirectoryCard';
 export { default as ChildDirectoryAddEditor } from './child-directory-add-editor/ChildDirectoryAddEditor';
+export { default as HelperText } from './helper-text/HelperText';
+export { default as ButtonTitleGroup } from './button-title-group/ButtonTitleGroup';
+export { default as CollapseForm } from './collapse-form/CollapseForm';

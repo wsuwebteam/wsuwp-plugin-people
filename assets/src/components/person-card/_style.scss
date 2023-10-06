@@ -1,15 +1,56 @@
-.wsu-cpm-person-card {
-    border: 1px solid var(--wp-admin-theme-color);
-    padding: 1.5rem !important;
-    max-width: 200px;
+@import '../../scss/variables.scss';
+
+.wsu-gbe-people-editor__person-card {
+    border: 1px solid #777;
+    padding: 0 0 1rem !important;
     border-radius: 6px;
     list-style-type: none;
-    margin: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
+    margin: 0 1rem 1rem 0 !important;
+    flex: 0 0 225px;
 
-    button {
-        background-color: var(--wp-admin-theme-color);
-        color: #fff;
+    &__image {
+        padding-bottom: 75%;
+        background-color: #ccc;
+        margin-bottom: 0.5rem;
+    }
+
+    &__button {
+        text-align: right;
+
+        button {
+            color: $wsu-color-crimson;
+        }
+    }
+
+    &__name,
+    &__email,
+    &__title {
+        padding: 0 1.25rem;
+        word-break: break-word;
+    }
+
+    &__name,
+    &__email,
+    &__title,
+    &__edit {
+        padding: 0 1.25rem;
+        word-break: break-word;
+    }
+
+    &__name {
+        font-size: 1rem !important;
+        font-weight: 600;
+        margin-bottom: 0.25rem !important;
+    }
+
+    &__email,
+    &__title,
+    &__edit {
+        font-size: 0.8rem;
+    }
+
+    &__edit {
+        margin-top: 1rem;
+        font-weight: 600;
     }
 }

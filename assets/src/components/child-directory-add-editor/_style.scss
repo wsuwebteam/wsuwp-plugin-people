@@ -1,7 +1,23 @@
-.wsu-cmp-child-directory-add-editor {
+@import '../../scss/variables.scss';
 
-    button {
-        background-color: var(--wp-admin-theme-color);
-        color: #fff;
+.wsu-gbe-people-child-directory__add-editor {
+
+    &__controls {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height ease-in-out 500ms;
+    }
+
+    &__controls[aria-expanded="true"] {
+        max-height: 500px;
+    }
+
+    &__add-controls-inner {
+        background-color: $wsu-color-gray-light;
+        padding: 1.5rem;
+    }
+
+    &__add-options {
+        margin-top: 1rem;
     }
 }

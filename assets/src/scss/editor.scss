@@ -1,0 +1,68 @@
+@import './variables.scss';
+
+#editor .wsu-gbe-people-editor {
+
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #555;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #555;
+    }
+
+}
+
+#editor .wsu-gbe-people {
+
+
+    &-button {
+        background-color: $wsu-color-crimson;
+        color: #fff !important;
+        font-size: 0.9rem !important;
+        padding: 1rem 1.5rem !important;
+        font-weight: 500 !important;
+        border: none !important;
+        height: auto !important;
+        border-radius: 4px;
+    }
+
+    &-button-light {
+        background-color: transparent;
+
+        color: $wsu-color-crimson !important;
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0.75rem !important;
+        font-weight: 400 !important;
+        border: 1px solid $wsu-color-crimson-light;
+        height: auto !important;
+        border-radius: 2px;
+    }
+
+    &-button--inline {
+        margin: 0 0.75rem 0.75rem 0 !important;
+    }
+
+    &-border-gray-light {
+        border: 1px solid #ccc;
+    }
+
+    &-border-horiz--gray-light {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    &-font-size--xsmall {
+        font-size: 0.875rem;
+    }
+
+    &-font-color--gray-light {
+        color: #777;
+    }
+
+}
+

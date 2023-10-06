@@ -9,16 +9,16 @@ const getPeople = ( directoryID, peopleIDs, callback, fields = ['name'], ) => {
     if ( peopleIDs ) {
 
         let data = { 
-            people_ids:peopleIDs, 
+            ids:peopleIDs, 
             directory:directoryID, 
             fields:fields.join(',') 
         }
     
         apiFetch( { 
-            path: addQueryArgs( '/directory/api/v1/people', data ) ,
+            path: addQueryArgs( '/peopleapi/v1/people', data ) ,
         }).then( ( response ) => {
     
-            callback( response.response );
+            callback( response);
     
         });
 
@@ -33,13 +33,13 @@ const getPeople = ( directoryID, peopleIDs, callback, fields = ['name'], ) => {
 
 const searchPeople = ( term, callback ) => {
 
-    let data = { term }
+    let data = { search:term }
 
     apiFetch( { 
-        path: addQueryArgs( '/directory/api/v1/people/search', data ) ,
+        path: addQueryArgs( '/peopleapi/v1/people', data ) ,
     }).then( ( response ) => {
 
-        callback( response.response );
+        callback( response );
 
     });
 
