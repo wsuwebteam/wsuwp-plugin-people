@@ -2,7 +2,7 @@
 /**
  * Plugin Name: (Beta) WSUWP People
  * Description: A WordPress plugin to index and display people.
- * Version: 0.1.0
+ * Version: 0.2.0
  * Requires PHP: 7.0
  * Author: Washington State University, Danial Bleile
  * Author URI: https://github.com/wsuwebteam/wsuwp-plugin-people
