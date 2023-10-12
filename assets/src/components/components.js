@@ -1,3 +1,5 @@
+import DirectoryPath from './directory-path/DirectoryPath';
+
 export { default as PeopleDirectoryEditor } from './people-directory-editor/PeopleDirectoryEditor';
 export { default as PeopleAddEditor } from './people-add-editor/PeopleAddEditor';
 export { default as PeopleAddEditorAdvanced } from './people-add-editor-advanced/PeopleAddEditorAdvanced';
@@ -11,3 +13,4 @@ export { default as ChildDirectoryAddEditor } from './child-directory-add-editor
 export { default as HelperText } from './helper-text/HelperText';
 export { default as ButtonTitleGroup } from './button-title-group/ButtonTitleGroup';
 export { default as CollapseForm } from './collapse-form/CollapseForm';
+export { default as DirectoryPath } from './directory-path/DirectoryPath';

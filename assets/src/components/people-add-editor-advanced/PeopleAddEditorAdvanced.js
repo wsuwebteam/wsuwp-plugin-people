@@ -42,9 +42,6 @@ const PeopleAddEditorAdvanced = ( props ) => {
     let termOptions = defaultSelect.concat( termList );
     let expanded = ( isActive ) ? 'true':'false';
 
-    console.log( taxonomy );
-    console.log( taxonomyOptions );
-
     return (
         <div className="wsu-cpm-people-add-editor-advanced" aria-expanded={ expanded } >
             <div className="wsu-cpm-people-add-editor-advanced__inner">

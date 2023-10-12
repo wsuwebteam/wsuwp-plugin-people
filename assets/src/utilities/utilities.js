@@ -6,3 +6,4 @@ export { default as addDirectory } from './addDirectory';
 export { default as getTaxonomies } from './getTaxonomies';
 export { default as getTaxonomyTerms } from './getTaxonomyTerms';
 export { default as getPeopleIDsFromTaxonomy } from './getPeopleIDsFromTaxonomy';
+export { default as getDirectoryPath } from './getDirectoryPath';

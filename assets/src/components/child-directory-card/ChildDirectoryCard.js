@@ -10,8 +10,6 @@ const ChildDirectoryCard = ( props ) => {
         peopleIDs = [],
     } = props;
 
-    console.log( peopleIDs );
-    console.log( id );
 
     let adminUrl = window.wsuPeopleData.adminUrl ?? '#';
 

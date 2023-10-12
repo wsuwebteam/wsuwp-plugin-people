@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "@wordpress/element";
 
 import { 
   ChildDirectoryEditor, 
-  PeopleDirectoryEditor 
+  PeopleDirectoryEditor,
+  DirectoryPath,
 } from '../../../assets/src/components/components';
+
+import {
+  getDirectoryPath,
+} from '../../../assets/src/utilities/utilities';
 
 import {
   getPeople,
@@ -26,36 +31,15 @@ const edit = (props) => {
 
 
   // Set inital state of directory
-  const [directory, updateDirectory]               = useState( getDirectory() );
+  const [directory, updateDirectory]            = useState( getDirectory() );
   const [childDirectories, setChildDirectories] = useState([]);
+  const [directoryPath, setDirectoryPath]       = useState([]);
 
 
 
   useEffect( () => {
-    // get people from people IDs and set them to people attributes.peopleIDs
-    // get child directories and set them to childDirectories
-    
-  }, [] );
-
- 
-  /*useEffect( () => {
-    updateDirectory( updateDirectoryPeople( directory, peopleIDs ) );
-    updatePeopleMeta( peopleIDs );
-    setAttributes( { peopleIDs } );
-  }, [peopleIDs] );*/
-
-
-  /*const addPeople = ( profileIDs ) => {
-
-    let currentPeople = attributes.peopleIDs;
-
-    let updatedPeople = currentPeople.concat( profileIDs );
-
-    setPeople( updatedPeople );
-
-  }*/
-
-
+    getDirectoryPath( directory.id, setDirectoryPath );
+  }, [directory] );
 
   const setPeopleIDs = ( profileIDs ) => {
 
@@ -65,8 +49,16 @@ const edit = (props) => {
 
   }
 
+  console.log( directory );
+
+  console.log( directoryPath );
+
   return (
     <div className="wsu-gbe-people-editor">
+      <DirectoryPath 
+        directory={directory}
+        directoryPath={ directoryPath }
+        />
       <ChildDirectoryEditor
         directory={ directory }
         childDirectories={ childDirectories }

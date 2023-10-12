@@ -138,8 +138,6 @@ const ChildDirectoryCard = props => {
     id = false,
     peopleIDs = []
   } = props;
-  console.log(peopleIDs);
-  console.log(id);
   let adminUrl = (_window$wsuPeopleData = window.wsuPeopleData.adminUrl) !== null && _window$wsuPeopleData !== void 0 ? _window$wsuPeopleData : '#';
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     className: "wsu-cpm-child-directory-card"
@@ -266,33 +264,35 @@ const CollapseForm = props => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ButtonTitleGroup: function() { return /* reexport safe */ _button_title_group_ButtonTitleGroup__WEBPACK_IMPORTED_MODULE_11__["default"]; },
-/* harmony export */   ChildDirectoryAddEditor: function() { return /* reexport safe */ _child_directory_add_editor_ChildDirectoryAddEditor__WEBPACK_IMPORTED_MODULE_9__["default"]; },
-/* harmony export */   ChildDirectoryCard: function() { return /* reexport safe */ _child_directory_card_ChildDirectoryCard__WEBPACK_IMPORTED_MODULE_8__["default"]; },
-/* harmony export */   ChildDirectoryEditor: function() { return /* reexport safe */ _child_directory_editor_ChildDirectoryEditor__WEBPACK_IMPORTED_MODULE_6__["default"]; },
-/* harmony export */   ChildDirectoryList: function() { return /* reexport safe */ _child_directory_list_ChildDirectoryList__WEBPACK_IMPORTED_MODULE_7__["default"]; },
-/* harmony export */   CollapseForm: function() { return /* reexport safe */ _collapse_form_CollapseForm__WEBPACK_IMPORTED_MODULE_12__["default"]; },
-/* harmony export */   HelperText: function() { return /* reexport safe */ _helper_text_HelperText__WEBPACK_IMPORTED_MODULE_10__["default"]; },
-/* harmony export */   PeopleAddEditor: function() { return /* reexport safe */ _people_add_editor_PeopleAddEditor__WEBPACK_IMPORTED_MODULE_1__["default"]; },
-/* harmony export */   PeopleAddEditorAdvanced: function() { return /* reexport safe */ _people_add_editor_advanced_PeopleAddEditorAdvanced__WEBPACK_IMPORTED_MODULE_2__["default"]; },
-/* harmony export */   PeopleDirectoryEditor: function() { return /* reexport safe */ _people_directory_editor_PeopleDirectoryEditor__WEBPACK_IMPORTED_MODULE_0__["default"]; },
-/* harmony export */   PeopleList: function() { return /* reexport safe */ _people_list_PeopleList__WEBPACK_IMPORTED_MODULE_4__["default"]; },
-/* harmony export */   PersonCard: function() { return /* reexport safe */ _person_card_PersonCard__WEBPACK_IMPORTED_MODULE_3__["default"]; },
-/* harmony export */   PersonSearchResult: function() { return /* reexport safe */ _person_search_result_PersonSearchResult__WEBPACK_IMPORTED_MODULE_5__["default"]; }
+/* harmony export */   ButtonTitleGroup: function() { return /* reexport safe */ _button_title_group_ButtonTitleGroup__WEBPACK_IMPORTED_MODULE_12__["default"]; },
+/* harmony export */   ChildDirectoryAddEditor: function() { return /* reexport safe */ _child_directory_add_editor_ChildDirectoryAddEditor__WEBPACK_IMPORTED_MODULE_10__["default"]; },
+/* harmony export */   ChildDirectoryCard: function() { return /* reexport safe */ _child_directory_card_ChildDirectoryCard__WEBPACK_IMPORTED_MODULE_9__["default"]; },
+/* harmony export */   ChildDirectoryEditor: function() { return /* reexport safe */ _child_directory_editor_ChildDirectoryEditor__WEBPACK_IMPORTED_MODULE_7__["default"]; },
+/* harmony export */   ChildDirectoryList: function() { return /* reexport safe */ _child_directory_list_ChildDirectoryList__WEBPACK_IMPORTED_MODULE_8__["default"]; },
+/* harmony export */   CollapseForm: function() { return /* reexport safe */ _collapse_form_CollapseForm__WEBPACK_IMPORTED_MODULE_13__["default"]; },
+/* harmony export */   DirectoryPath: function() { return /* reexport safe */ _directory_path_DirectoryPath__WEBPACK_IMPORTED_MODULE_0__["default"]; },
+/* harmony export */   HelperText: function() { return /* reexport safe */ _helper_text_HelperText__WEBPACK_IMPORTED_MODULE_11__["default"]; },
+/* harmony export */   PeopleAddEditor: function() { return /* reexport safe */ _people_add_editor_PeopleAddEditor__WEBPACK_IMPORTED_MODULE_2__["default"]; },
+/* harmony export */   PeopleAddEditorAdvanced: function() { return /* reexport safe */ _people_add_editor_advanced_PeopleAddEditorAdvanced__WEBPACK_IMPORTED_MODULE_3__["default"]; },
+/* harmony export */   PeopleDirectoryEditor: function() { return /* reexport safe */ _people_directory_editor_PeopleDirectoryEditor__WEBPACK_IMPORTED_MODULE_1__["default"]; },
+/* harmony export */   PeopleList: function() { return /* reexport safe */ _people_list_PeopleList__WEBPACK_IMPORTED_MODULE_5__["default"]; },
+/* harmony export */   PersonCard: function() { return /* reexport safe */ _person_card_PersonCard__WEBPACK_IMPORTED_MODULE_4__["default"]; },
+/* harmony export */   PersonSearchResult: function() { return /* reexport safe */ _person_search_result_PersonSearchResult__WEBPACK_IMPORTED_MODULE_6__["default"]; }
 /* harmony export */ });
-/* harmony import */ var _people_directory_editor_PeopleDirectoryEditor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./people-directory-editor/PeopleDirectoryEditor */ "./assets/src/components/people-directory-editor/PeopleDirectoryEditor.js");
-/* harmony import */ var _people_add_editor_PeopleAddEditor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./people-add-editor/PeopleAddEditor */ "./assets/src/components/people-add-editor/PeopleAddEditor.js");
-/* harmony import */ var _people_add_editor_advanced_PeopleAddEditorAdvanced__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./people-add-editor-advanced/PeopleAddEditorAdvanced */ "./assets/src/components/people-add-editor-advanced/PeopleAddEditorAdvanced.js");
-/* harmony import */ var _person_card_PersonCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./person-card/PersonCard */ "./assets/src/components/person-card/PersonCard.js");
-/* harmony import */ var _people_list_PeopleList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./people-list/PeopleList */ "./assets/src/components/people-list/PeopleList.js");
-/* harmony import */ var _person_search_result_PersonSearchResult__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./person-search-result/PersonSearchResult */ "./assets/src/components/person-search-result/PersonSearchResult.js");
-/* harmony import */ var _child_directory_editor_ChildDirectoryEditor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./child-directory-editor/ChildDirectoryEditor */ "./assets/src/components/child-directory-editor/ChildDirectoryEditor.js");
-/* harmony import */ var _child_directory_list_ChildDirectoryList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./child-directory-list/ChildDirectoryList */ "./assets/src/components/child-directory-list/ChildDirectoryList.js");
-/* harmony import */ var _child_directory_card_ChildDirectoryCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./child-directory-card/ChildDirectoryCard */ "./assets/src/components/child-directory-card/ChildDirectoryCard.js");
-/* harmony import */ var _child_directory_add_editor_ChildDirectoryAddEditor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./child-directory-add-editor/ChildDirectoryAddEditor */ "./assets/src/components/child-directory-add-editor/ChildDirectoryAddEditor.js");
-/* harmony import */ var _helper_text_HelperText__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./helper-text/HelperText */ "./assets/src/components/helper-text/HelperText.js");
-/* harmony import */ var _button_title_group_ButtonTitleGroup__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./button-title-group/ButtonTitleGroup */ "./assets/src/components/button-title-group/ButtonTitleGroup.js");
-/* harmony import */ var _collapse_form_CollapseForm__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./collapse-form/CollapseForm */ "./assets/src/components/collapse-form/CollapseForm.js");
+/* harmony import */ var _directory_path_DirectoryPath__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./directory-path/DirectoryPath */ "./assets/src/components/directory-path/DirectoryPath.js");
+/* harmony import */ var _people_directory_editor_PeopleDirectoryEditor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./people-directory-editor/PeopleDirectoryEditor */ "./assets/src/components/people-directory-editor/PeopleDirectoryEditor.js");
+/* harmony import */ var _people_add_editor_PeopleAddEditor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./people-add-editor/PeopleAddEditor */ "./assets/src/components/people-add-editor/PeopleAddEditor.js");
+/* harmony import */ var _people_add_editor_advanced_PeopleAddEditorAdvanced__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./people-add-editor-advanced/PeopleAddEditorAdvanced */ "./assets/src/components/people-add-editor-advanced/PeopleAddEditorAdvanced.js");
+/* harmony import */ var _person_card_PersonCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./person-card/PersonCard */ "./assets/src/components/person-card/PersonCard.js");
+/* harmony import */ var _people_list_PeopleList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./people-list/PeopleList */ "./assets/src/components/people-list/PeopleList.js");
+/* harmony import */ var _person_search_result_PersonSearchResult__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./person-search-result/PersonSearchResult */ "./assets/src/components/person-search-result/PersonSearchResult.js");
+/* harmony import */ var _child_directory_editor_ChildDirectoryEditor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./child-directory-editor/ChildDirectoryEditor */ "./assets/src/components/child-directory-editor/ChildDirectoryEditor.js");
+/* harmony import */ var _child_directory_list_ChildDirectoryList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./child-directory-list/ChildDirectoryList */ "./assets/src/components/child-directory-list/ChildDirectoryList.js");
+/* harmony import */ var _child_directory_card_ChildDirectoryCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./child-directory-card/ChildDirectoryCard */ "./assets/src/components/child-directory-card/ChildDirectoryCard.js");
+/* harmony import */ var _child_directory_add_editor_ChildDirectoryAddEditor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./child-directory-add-editor/ChildDirectoryAddEditor */ "./assets/src/components/child-directory-add-editor/ChildDirectoryAddEditor.js");
+/* harmony import */ var _helper_text_HelperText__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./helper-text/HelperText */ "./assets/src/components/helper-text/HelperText.js");
+/* harmony import */ var _button_title_group_ButtonTitleGroup__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./button-title-group/ButtonTitleGroup */ "./assets/src/components/button-title-group/ButtonTitleGroup.js");
+/* harmony import */ var _collapse_form_CollapseForm__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./collapse-form/CollapseForm */ "./assets/src/components/collapse-form/CollapseForm.js");
 
 
 
@@ -306,6 +306,49 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+/***/ }),
+
+/***/ "./assets/src/components/directory-path/DirectoryPath.js":
+/*!***************************************************************!*\
+  !*** ./assets/src/components/directory-path/DirectoryPath.js ***!
+  \***************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_style.scss */ "./assets/src/components/directory-path/_style.scss");
+
+
+const DirectoryPathItem = props => {
+  var _window$wsuPeopleData;
+  let {
+    title = '',
+    post_id = ''
+  } = props;
+  let adminUrl = (_window$wsuPeopleData = window.wsuPeopleData.adminUrl) !== null && _window$wsuPeopleData !== void 0 ? _window$wsuPeopleData : '#';
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    href: `${adminUrl}/post.php?post=${post_id}&action=edit`
+  }, title));
+};
+const DirectoryPath = props => {
+  let {
+    directoryPath = [],
+    directory
+  } = props;
+  let hasDirectory = directoryPath.length ? true : false;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, hasDirectory && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+    className: "wsu-gbe-people__directory-path"
+  }, directoryPath.map(directory => {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(DirectoryPathItem, {
+      ...directory
+    });
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, directory.directoryTitle)));
+};
+/* harmony default export */ __webpack_exports__["default"] = (DirectoryPath);
 
 /***/ }),
 
@@ -371,8 +414,6 @@ const PeopleAddEditorAdvanced = props => {
   let taxonomyOptions = defaultSelect.concat(taxonomyList);
   let termOptions = defaultSelect.concat(termList);
   let expanded = isActive ? 'true' : 'false';
-  console.log(taxonomy);
-  console.log(taxonomyOptions);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "wsu-cpm-people-add-editor-advanced",
     "aria-expanded": expanded
@@ -607,10 +648,12 @@ const PersonCard = props => {
     directoryID = false,
     title = [],
     removePerson,
-    email = ''
+    email = '',
+    photo_sizes = {}
   } = props;
   let positionTitle = title.length ? title[0] : '';
   let adminUrl = (_window$wsuPeopleData = window.wsuPeopleData.adminUrl) !== null && _window$wsuPeopleData !== void 0 ? _window$wsuPeopleData : '#';
+  let imageUrl = photo_sizes && photo_sizes.hasOwnProperty('thumbnail') ? photo_sizes.thumbnail : '';
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     className: "wsu-gbe-people-editor__person-card"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -622,7 +665,9 @@ const PersonCard = props => {
     }
   }, "Remove X")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "wsu-gbe-people-editor__person-card__image"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+  }, imageUrl && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: imageUrl
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
     className: "wsu-gbe-people-editor__person-card__name"
   }, name), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "wsu-gbe-people-editor__person-card__title"
@@ -803,18 +848,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const getChildDirectories = (directoryID, callback) => {
-  let data = {
-    directory_id: directoryID
-  };
   _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
-    path: (0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)('/directory/api/v1/children', data)
+    path: (0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)(`/peopleapi/v1/directory/children/${directoryID}`)
   }).then(response => {
-    console.log(response.response);
-    callback(response.response);
+    callback(response);
   });
   return [];
 };
 /* harmony default export */ __webpack_exports__["default"] = (getChildDirectories);
+
+/***/ }),
+
+/***/ "./assets/src/utilities/getDirectoryPath.js":
+/*!**************************************************!*\
+  !*** ./assets/src/utilities/getDirectoryPath.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_url__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/url */ "@wordpress/url");
+/* harmony import */ var _wordpress_url__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_url__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const getDirectoryPath = (directoryID, callback) => {
+  let data = {
+    directory: directoryID
+  };
+  _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+    path: (0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)('/peopleapi/v1/editor/directory/path', data)
+  }).then(response => {
+    callback(response);
+  });
+  return [];
+};
+/* harmony default export */ __webpack_exports__["default"] = (getDirectoryPath);
 
 /***/ }),
 
@@ -1007,6 +1076,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   addIDs: function() { return /* reexport safe */ _addIDs__WEBPACK_IMPORTED_MODULE_1__["default"]; },
 /* harmony export */   deDupArray: function() { return /* reexport safe */ _deDupArray__WEBPACK_IMPORTED_MODULE_0__["default"]; },
 /* harmony export */   getChildDirectories: function() { return /* reexport safe */ _getChildDirectories__WEBPACK_IMPORTED_MODULE_3__["default"]; },
+/* harmony export */   getDirectoryPath: function() { return /* reexport safe */ _getDirectoryPath__WEBPACK_IMPORTED_MODULE_8__["default"]; },
 /* harmony export */   getPeopleIDsFromTaxonomy: function() { return /* reexport safe */ _getPeopleIDsFromTaxonomy__WEBPACK_IMPORTED_MODULE_7__["default"]; },
 /* harmony export */   getTaxonomies: function() { return /* reexport safe */ _getTaxonomies__WEBPACK_IMPORTED_MODULE_5__["default"]; },
 /* harmony export */   getTaxonomyTerms: function() { return /* reexport safe */ _getTaxonomyTerms__WEBPACK_IMPORTED_MODULE_6__["default"]; },
@@ -1020,6 +1090,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _getTaxonomies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./getTaxonomies */ "./assets/src/utilities/getTaxonomies.js");
 /* harmony import */ var _getTaxonomyTerms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./getTaxonomyTerms */ "./assets/src/utilities/getTaxonomyTerms.js");
 /* harmony import */ var _getPeopleIDsFromTaxonomy__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./getPeopleIDsFromTaxonomy */ "./assets/src/utilities/getPeopleIDsFromTaxonomy.js");
+/* harmony import */ var _getDirectoryPath__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./getDirectoryPath */ "./assets/src/utilities/getDirectoryPath.js");
+
 
 
 
@@ -1069,8 +1141,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _assets_src_components_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/src/components/components */ "./assets/src/components/components.js");
-/* harmony import */ var _assets_src_utilities_people__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/src/utilities/people */ "./assets/src/utilities/people.js");
-/* harmony import */ var _assets_src_utilities_directory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/src/utilities/directory */ "./assets/src/utilities/directory.js");
+/* harmony import */ var _assets_src_utilities_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/src/utilities/utilities */ "./assets/src/utilities/utilities.js");
+/* harmony import */ var _assets_src_utilities_people__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/src/utilities/people */ "./assets/src/utilities/people.js");
+/* harmony import */ var _assets_src_utilities_directory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../assets/src/utilities/directory */ "./assets/src/utilities/directory.js");
+
 
 
 
@@ -1085,34 +1159,26 @@ const edit = props => {
   } = props;
 
   // Set inital state of directory
-  const [directory, updateDirectory] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_assets_src_utilities_directory__WEBPACK_IMPORTED_MODULE_3__.getDirectory)());
+  const [directory, updateDirectory] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_assets_src_utilities_directory__WEBPACK_IMPORTED_MODULE_4__.getDirectory)());
   const [childDirectories, setChildDirectories] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  const [directoryPath, setDirectoryPath] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    // get people from people IDs and set them to people attributes.peopleIDs
-    // get child directories and set them to childDirectories
-  }, []);
-
-  /*useEffect( () => {
-    updateDirectory( updateDirectoryPeople( directory, peopleIDs ) );
-    updatePeopleMeta( peopleIDs );
-    setAttributes( { peopleIDs } );
-  }, [peopleIDs] );*/
-
-  /*const addPeople = ( profileIDs ) => {
-      let currentPeople = attributes.peopleIDs;
-      let updatedPeople = currentPeople.concat( profileIDs );
-      setPeople( updatedPeople );
-    }*/
-
+    (0,_assets_src_utilities_utilities__WEBPACK_IMPORTED_MODULE_2__.getDirectoryPath)(directory.id, setDirectoryPath);
+  }, [directory]);
   const setPeopleIDs = profileIDs => {
     setAttributes({
       peopleIDs: profileIDs
     });
-    (0,_assets_src_utilities_people__WEBPACK_IMPORTED_MODULE_2__.updatePeopleMeta)(profileIDs);
+    (0,_assets_src_utilities_people__WEBPACK_IMPORTED_MODULE_3__.updatePeopleMeta)(profileIDs);
   };
+  console.log(directory);
+  console.log(directoryPath);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "wsu-gbe-people-editor"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_assets_src_components_components__WEBPACK_IMPORTED_MODULE_1__.ChildDirectoryEditor, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_assets_src_components_components__WEBPACK_IMPORTED_MODULE_1__.DirectoryPath, {
+    directory: directory,
+    directoryPath: directoryPath
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_assets_src_components_components__WEBPACK_IMPORTED_MODULE_1__.ChildDirectoryEditor, {
     directory: directory,
     childDirectories: childDirectories,
     setChildDirectories: setChildDirectories
@@ -1268,6 +1334,18 @@ __webpack_require__.r(__webpack_exports__);
 /*!*********************************************************!*\
   !*** ./assets/src/components/collapse-form/_style.scss ***!
   \*********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./assets/src/components/directory-path/_style.scss":
+/*!**********************************************************!*\
+  !*** ./assets/src/components/directory-path/_style.scss ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);

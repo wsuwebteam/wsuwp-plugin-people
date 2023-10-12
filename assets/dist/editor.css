@@ -48,6 +48,26 @@
 #editor .wsu-gbe-people-font-color--gray-light {
   color: #777;
 }
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/directory-path/_style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+.wsu-gbe-people__directory-path {
+  list-style: none;
+  display: flex;
+  margin: 0 !important;
+  padding: 1rem 0 2rem !important;
+}
+.wsu-gbe-people__directory-path li {
+  font-size: 0.8rem !important;
+}
+.wsu-gbe-people__directory-path li::before {
+  content: "/";
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.wsu-gbe-people__directory-path li:first-child::before {
+  display: none;
+}
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/components/people-directory-editor/_style.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************/
@@ -79,9 +99,20 @@
   flex: 0 0 225px;
 }
 .wsu-gbe-people-editor__person-card__image {
-  padding-bottom: 75%;
   background-color: #ccc;
   margin-bottom: 0.5rem;
+  padding-top: 75%;
+  position: relative;
+}
+.wsu-gbe-people-editor__person-card__image img {
+  width: 100%;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .wsu-gbe-people-editor__person-card__button {
   text-align: right;

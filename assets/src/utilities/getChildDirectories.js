@@ -4,17 +4,11 @@ import { addQueryArgs } from '@wordpress/url';
 
 const getChildDirectories = ( directoryID, callback ) => {
 
-    let data = { 
-        directory_id:directoryID, 
-    }
-
     apiFetch( { 
-        path: addQueryArgs( '/directory/api/v1/children', data ) ,
+        path: addQueryArgs( `/peopleapi/v1/directory/children/${directoryID}` ) ,
     }).then( ( response ) => {
 
-        console.log( response.response );
-
-        callback( response.response );
+        callback( response );
 
     });
 

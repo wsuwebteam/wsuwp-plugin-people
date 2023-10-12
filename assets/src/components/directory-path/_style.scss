@@ -1,0 +1,20 @@
+.wsu-gbe-people__directory-path {
+    list-style: none;
+    display: flex;
+    margin: 0 !important;
+    padding: 1rem 0 2rem !important;
+
+    li {
+        font-size: 0.8rem !important;
+    }
+
+    li::before {
+        content: '/';
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+
+    li:first-child::before {
+        display: none;
+    }
+}
