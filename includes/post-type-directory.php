@@ -41,7 +41,7 @@ class Post_Type_Directory {
 			'show_in_rest'  => true,
 			'menu_position' => 4,
 			'menu_icon'     => 'dashicons-media-text',
-			'show_in_menu'  => 'tools.php', // set this
+			//'show_in_menu'  => 'tools.php', // set this
 			'hierarchical'  => true,
 			'supports'      => array(
 				'title',
@@ -49,6 +49,8 @@ class Post_Type_Directory {
 				'thumbnail',
 				'excerpt',
 				'custom-fields',
+				'revisions',
+				'page-attributes',
 			),
 			'rewrite'       => array(
 				'slug'       => 'wsu-directory',
